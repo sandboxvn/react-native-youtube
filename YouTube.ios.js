@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import ReactNative, { requireNativeComponent, NativeModules, ViewPropTypes } from 'react-native';
+import ReactNative, { requireNativeComponent, NativeModules } from 'react-native';
 
 const RCTYouTube = requireNativeComponent('RCTYouTube', null);
 
@@ -34,28 +33,6 @@ const parsePlayerParams = (props) => ({
 });
 
 export default class YouTube extends React.Component {
-  static propTypes = {
-    videoId: PropTypes.string,
-    videoIds: PropTypes.arrayOf(PropTypes.string),
-    playlistId: PropTypes.string,
-    play: PropTypes.bool,
-    loop: PropTypes.bool,
-    fullscreen: PropTypes.bool,
-    controls: PropTypes.oneOf([0, 1, 2]),
-    showinfo: PropTypes.bool,
-    modestbranding: PropTypes.bool,
-    showFullscreenButton: PropTypes.bool,
-    rel: PropTypes.bool,
-    origin: PropTypes.string,
-    onError: PropTypes.func,
-    onReady: PropTypes.func,
-    onChangeState: PropTypes.func,
-    onChangeQuality: PropTypes.func,
-    onChangeFullscreen: PropTypes.func,
-    onProgress: PropTypes.func,
-    style: ViewPropTypes.style,
-  };
-
   constructor(props) {
     super(props);
 

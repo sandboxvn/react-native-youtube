@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactNative, {
   View,
-  ViewPropTypes,
   Text,
   StyleSheet,
   requireNativeComponent,
@@ -22,25 +20,6 @@ const RCTYouTube = requireNativeComponent('ReactYouTube', YouTube, {
 });
 
 export default class YouTube extends React.Component {
-  static propTypes = {
-    apiKey: PropTypes.string.isRequired,
-    videoId: PropTypes.string,
-    videoIds: PropTypes.arrayOf(PropTypes.string),
-    playlistId: PropTypes.string,
-    play: PropTypes.bool,
-    loop: PropTypes.bool,
-    fullscreen: PropTypes.bool,
-    controls: PropTypes.oneOf([0, 1, 2]),
-    showFullscreenButton: PropTypes.bool,
-    resumePlayAndroid: PropTypes.bool,
-    onError: PropTypes.func,
-    onReady: PropTypes.func,
-    onChangeState: PropTypes.func,
-    onChangeQuality: PropTypes.func,
-    onChangeFullscreen: PropTypes.func,
-    style: ViewPropTypes.style,
-  };
-
   static defaultProps = {
     showFullscreenButton: true,
     resumePlayAndroid: true,
